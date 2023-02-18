@@ -1,0 +1,90 @@
+@import 'globals';
+
+footer {
+    align-items: center;
+    justify-content: center;
+    clear: booth;
+    color: $footer-text-color;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: $footer-background-color;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem;
+
+    h1 {
+        margin: 1em 0;
+
+        a {
+            color: nth($color-palette, 2);
+        
+            i {
+                font-size: 0.7em;
+                opacity: .7;
+            }
+
+        }
+    }
+
+    p {
+        color: $footer-text-color;
+        font-size: .9em;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &.contact-socials {
+            @include socials;
+        }
+    }
+}
+
+
+
+
+
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+// MEDIA QUERY
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+
+
+
+
+
+@media only screen and (max-width: #{$tablet-screen-width - 1}) {
+
+    footer {
+        padding-bottom: 10vh;
+        flex-flow: column;
+        padding: 2rem 1rem;
+
+        ul {
+           &.contact-socials {
+               justify-content: space-between;
+               width: 100%;
+
+               li {
+                   margin: 1rem 0;
+
+                   a {
+                       font-size: 2rem;
+                       text-align: center;
+                       transform: rotatez(15deg);
+
+                       &::after {
+                           display: none;
+                       }
+                   }
+               }
+           }
+        }
+    }
+
+}
