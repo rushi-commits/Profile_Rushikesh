@@ -1,2 +1,2 @@
-# sumit-Portfolio
+# Rushikesh-Portfolio
 Created with CodeSandbox
